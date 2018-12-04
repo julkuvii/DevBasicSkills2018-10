@@ -8,10 +8,8 @@ body{
     padding: 1%;
     margin: 5%;
     position: relative;
-    background-color: antiquewhite;
-    border: solid 2px antiquewhite;
-    font: 30px; 
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%; 
+    font-family: "Verdana", Geneva, Tahoma, sans-serif ;
 }
 
 #boxes{
