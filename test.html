@@ -14,44 +14,95 @@
 
     </div>
     <div id="boxes" align="center">
-            <h2>1 Number system conversions</h2>
+            <h2>Number system conversions</h2>
             <div id="content" align="left">
-                <div id="buttons" align="left"> Choose the numberbase you are converting from: 
-                    <br><br>
+            Choose the numberbase you are converting from: <br><br>
                     <button>Decimal</button>
                     <button>Binary</button>
                     <button>Hexadecimal</button>
-                    <button>Octal</button>
-                </div> 
-                <br><br>
-                <input type="text" name="givenNumber" value="" id="givenNumber" placeholder="Number you want to convert">
+                    <button>Octal</button><br><br>
+
+                <div id="givenNumber">
+                        <input type="text" name="givenNumber" value="" id="givenNumber" placeholder="Number you want to convert">
+
+                </div><br>
+
+            Choose the numberbase you are converting to:<br><br>
+
+                        <button>Decimal</button>
+                        <button>Binary</button>
+                        <button>Hexadecimal</button>
+                        <button>Octal</button><br><br>
+
+                This is the converted number: 
+            </div><br>
+    </div>
+
+
+    <div id="boxes" align="center">
+            <h2>Number system outputs</h2>
+            <div id="content" align="left">
+                Here is a table of decimal dumbers from 0 to 50<br><br>
+                
+                <div id="print_clear">
+                    <button onclick="tablex">Print table</button>
+                    <button>Clear table</button>
+                    
                 </div>
 
+
+            </div>
+
     </div>
+
+
     <div id="boxes" align="center">
-            <h2>2 Number system outputs</h2>
+            <h2>Combinatorics</h2>
             <div id="content">
 
                 </div>
 
     </div>
-    <div id="boxes" align="center">
-            <h2>3 Combinatorics</h2>
-            <div id="content">
 
+
+    <div id="boxes" align="center">
+            <h2>Truth tables</h2>
+            <div id="content" align="left">
+                Choose value for "p"
+                <select  id="drop" onchange="showSelection()">
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                
+                    </select><br><br>
+                Choose value for "q"
+                <select  id="drop" onchange="showSelection()">
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                
+                    </select><br><br>
+                Choose operator
+                <select  id="drop" onchange="showSelection()">
+                        <option value="and">and</option>
+                        <option value="or">or</option>
+                        <option value="nor">nor</option>
+                        <option value="xor">xor</option>
+                        <option value="1ifthen">if-then</option>
+                        <option value="ifonlyif">if and only if</option>
+
+                    </select><br>
                 </div>
 
     </div>
-    <div id="boxes" align="center">
-            <h2>4 Truth tables</h2>
-            <div id="content">
 
-                </div>
 
-    </div>
     <div id="boxes" align="center">
-            <h2>5 Random values</h2>
-            <div id="content">
+            <h2>Random values</h2>
+            <div id="content" align="left">
+                Choose range <br><br>
+                From
+                <input type="number" id="from"> <br><br>
+                To
+                <input type="number" id="to"> <br><br>
 
                 </div>
 
