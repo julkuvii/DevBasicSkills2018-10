@@ -17,25 +17,15 @@
             <h2>Number system conversions</h2>
             <div id="content" align="left">
             Choose the numberbase you are converting from: <br><br>
-                    <button>Decimal</button>
-                    <button>Binary</button>
-                    <button>Hexadecimal</button>
-                    <button>Octal</button><br><br>
-
-                <div id="givenNumber">
-                        <input type="text" name="givenNumber" value="" id="givenNumber" placeholder="Number you want to convert">
-
-                </div><br>
-
-            Choose the numberbase you are converting to:<br><br>
-
-                        <button>Decimal</button>
-                        <button>Binary</button>
-                        <button>Hexadecimal</button>
-                        <button>Octal</button><br><br>
-
-                This is the converted number: 
-            </div><br>
+                    Decimal <br>
+                    <input type="number" id="dec"><br><br>
+                    Binary <br>
+                    <input type="number" id="bin"><br><br>
+                    Octal <br>
+                    <input type="number" id="oct"><br><br>
+                    Hexadecimal <br>
+                    <input type="text" id="hex"><br><br>
+            <button type="button" id="convert">Convert</button><br>
     </div>
 
 
@@ -43,7 +33,7 @@
             <h2>Number system outputs</h2>
             <div id="content" align="left">
                 Here is a table of decimal dumbers from 0 to 50<br><br>
-                
+
                 <div id="print_clear">
                     <button onclick="tablex">Print table</button>
                     <button>Clear table</button>

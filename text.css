@@ -16,9 +16,8 @@ body{
     background-color: antiquewhite;
     border: solid 2px antiquewhite;
     padding: 1%;
-    width: 90%;
+    width: 80%;
     height: 10%;
-    position: relative;
     margin: 5%;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 25px;
@@ -28,10 +27,9 @@ body{
 #content{
     background-color: rgb(168, 175, 179);
     border: solid 2px rgb(168, 175, 179);
-    padding: 1%;
-    width: 90%;
+    padding: 5%;
+    width: 80%;
     height: 10%;
-    position: relative;
     margin-left: 5%;
     margin-right: 5%;
     font-family: Arial, Helvetica, sans-serif;
