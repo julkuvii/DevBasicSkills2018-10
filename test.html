@@ -9,13 +9,20 @@
     <title>Math help</title>
 </head>
 <body>
-    <div id="header" align="left">
+    <div id="header">
             <h1>Computing Maths</h1>
 
     </div>
-    <div id="boxes" align="center">
-            <h2>Number system conversions</h2>
-            <div id="content" align="left">
+
+
+
+
+
+        <h2>Number system conversions</h2>
+    <div class="content_boxes">
+            <div id="number_system_conversions">
+
+
             Choose the numberbase you are converting from: <br><br>
                     Decimal <br>
                     <input type="number" id="dec"><br><br>
@@ -25,18 +32,23 @@
                     <input type="number" id="oct"><br><br>
                     Hexadecimal <br>
                     <input type="text" id="hex"><br><br>
-            <button type="button" id="convert">Convert</button><br>
+            <button class="button" type="button" id="convert">Convert</button><br>
+
+                
+
+
+            </div>
     </div>
 
 
-    <div id="boxes" align="center">
-            <h2>Number system outputs</h2>
-            <div id="content" align="left">
+        <h2>Number system outputs</h2>
+    <div class="content_boxes">        
+                <div id="number_system_outputs">
                 Here is a table of decimal dumbers from 0 to 50<br><br>
 
                 <div id="print_clear">
-                    <button onclick="tablex">Print table</button>
-                    <button>Clear table</button>
+                    <button class="button" onclick="tablex">Print table</button>
+                    <button class="button">Clear table</button>
                     
                 </div>
 
@@ -46,48 +58,56 @@
     </div>
 
 
-    <div id="boxes" align="center">
-            <h2>Combinatorics</h2>
-            <div id="content">
+    
+        <h2>Combinatorics</h2>
+    <div class="content_boxes">    
+            <div id="combinatorics">
 
                 </div>
 
     </div>
 
 
-    <div id="boxes" align="center">
-            <h2>Truth tables</h2>
-            <div id="content" align="left">
+    
+        <h2>Truth tables</h2>
+    <div class="content_boxes">    
+            <div id="truth_tabels">
                 Choose value for "p"
-                <select  id="drop" onchange="showSelection()">
-                        <option value="">0</option>
-                        <option value="1">1</option>
-                
-                    </select><br><br>
-                Choose value for "q"
-                <select  id="drop" onchange="showSelection()">
-                        <option value="">0</option>
-                        <option value="1">1</option>
-                
-                    </select><br><br>
-                Choose operator
-                <select  id="drop" onchange="showSelection()">
-                        <option value="and">and</option>
-                        <option value="or">or</option>
-                        <option value="nor">nor</option>
-                        <option value="xor">xor</option>
-                        <option value="1ifthen">if-then</option>
-                        <option value="ifonlyif">if and only if</option>
+                <form id="selections">
+                    <label for="p"></label> <br>
+                    <select  id="p" name="p">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                    
+                        </select><br><br>
+                    Choose value for "q"
+                    <label for="q"></label><br>
+                    <select  id="q" name="q">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                    
+                        </select><br><br>
+                    Choose operator <br>
+                    <label for="operator"></label>
+                    <select  id="operator" name="operator">
+                            <option value="and">and</option>
+                            <option value="or">or</option>
+                            <option value="nor">nor</option>
 
-                    </select><br>
+
+                        </select><br><br>
+                        <button class="button" type="button" name="button" onclick="submitTable()">Save</button>
+                </form>
+                
                 </div>
 
     </div>
 
 
-    <div id="boxes" align="center">
+    
             <h2>Random values</h2>
-            <div id="content" align="left">
+    <div class="content_boxes">        
+            <div id="random_values">
                 Choose range <br><br>
                 From
                 <input type="number" id="from"> <br><br>

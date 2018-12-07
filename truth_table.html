@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8" />
+        <script src="truth_table.js"></script>
+    </head>
+
+    <body>
+        <form name="myForm" onsubmit="return submitTable()" method="post">
+            <select name="selectP" id="selectP">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                  </select>            
+                  
+            <select name="selectQ" id="selectQ">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                 </select>
+            <select name="operator" id="operator">
+                   <option value="and">and</option>
+                   <option value="or">or</option>
+                 </select>
+            
+            <input type="submit" value="Submit">
+
+        </form>
+    </body>
+</html>
