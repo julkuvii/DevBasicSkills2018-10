@@ -10,6 +10,11 @@ h2{
     background-color: rgb(81, 121, 47);
 }
 
+h3{
+    color: white;
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    font-size: 140%;
+}
 
 #header{
     font-family: "Verdana", Geneva, Tahoma, sans-serif;
