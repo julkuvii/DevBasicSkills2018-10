@@ -37,6 +37,28 @@ h2{
     font-size: 16px;
   }
 
+  .truth_table{
+      border: 2px solid #ddd;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 16px;
+      padding: 2%;
+      width: 90%;
+  }
+
+tr{
+    border-color: white;
+}
+
+th{
+    border-color: white;
+    padding: 15px;
+}
+
+td{
+    border: 2px solid white;
+    padding: 8px;
+}
 
 #givenNumber{
     width: 50%;

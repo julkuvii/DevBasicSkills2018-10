@@ -62,6 +62,11 @@
         <h2>Combinatorics</h2>
     <div class="content_boxes">    
             <div id="combinatorics">
+                <select name="combinatorics_select" id="combinatorics_select">
+                    <option value="combination">Combination</option>
+                    <option value="permutation_with_replacement">Permutation with replacement</option>
+                    <option value="permutation_without_replacement">Permuntation without replacement</option>
+                </select>
 
                 </div>
 
@@ -72,32 +77,21 @@
         <h2>Truth tables</h2>
     <div class="content_boxes">    
             <div id="truth_tabels">
-                Choose value for "p"
-                <form id="selections">
-                    <label for="p"></label> <br>
-                    <select  id="p" name="p">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                    
-                        </select><br><br>
-                    Choose value for "q"
-                    <label for="q"></label><br>
-                    <select  id="q" name="q">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                    
-                        </select><br><br>
-                    Choose operator <br>
-                    <label for="operator"></label>
-                    <select  id="operator" name="operator">
-                            <option value="and">and</option>
-                            <option value="or">or</option>
-                            <option value="nor">nor</option>
 
+                <table border="2px" id="table" class="truth_table">
+                    <tr>
+                      <th>x</th>
+                      <th>y</th>
+                      <th>∧</th>
+                      <th>∨</th>
+                      <th>¬(x ∧ y)</th>
+                      <th>¬(x ∨ y)</th>
+                      <th>x ⊕ y</th>
+                    </tr>
+                  </table>
 
-                        </select><br><br>
-                        <button class="button" type="button" name="button" onclick="submitTable()">Save</button>
-                </form>
+                  <script src="truth_table.js"></script>
+                
                 
                 </div>
 
