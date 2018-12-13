@@ -10,8 +10,9 @@
 </head>
 <body>
     <div id="header">
+            <img src="logo.png" width="20%" height="40%">
             <h1>Computing Maths</h1>
-
+        
     </div>
 
 
@@ -34,21 +35,19 @@
                     <input type="text" id="hex"><br><br>
             <button class="button" type="button" id="convert">Convert</button><br>
 
-                
-
-
             </div>
+
     </div>
 
 
         <h2>Number system outputs</h2>
     <div class="content_boxes">        
                 <div id="number_system_outputs">
-                Here is a table of decimal dumbers from 0 to 50<br><br>
+                <br><br>
 
                 <div>
                     <button class="button" onclick="print_table()">Print table</button>
-                    <button class="button" onclick="clear_table()">Clear table</button><br><br>
+                    <button class="button" onclick="clear_table()">Hide table</button><br><br>
 
                     <table id="number_table" class="truth_table">
                         
@@ -58,9 +57,12 @@
                     
                 </div>
 
-
             </div>
-
+            <div class="info_box">
+                <p>Here you can print a table that has all decimal numbers from 0-50 converted
+                     into binary, octal and decimal numbers. You can hide the table with the Hide table
+                    button. </p>
+            </div>
     </div>
 
 
