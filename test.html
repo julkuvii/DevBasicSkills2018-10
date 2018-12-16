@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <script src="test.js" charset="utf-8"></script>
+    <script src="combination.js"></script>
+    <script src="random.js"></script>
     <link rel="stylesheet" href="text.css">
 
 
@@ -22,10 +24,9 @@
         <h2>Number system conversions</h2>
     <div class="content_boxes">
             <div id="number_system_conversions">
-
+                <input id="dec" oninput="Convert('dec', 10)" placeholder="dec" spellcheck="false"><br><br>
                 <input id="bin" oninput="Convert('bin', 2)" placeholder="bin" spellcheck="false"><br><br>
                 <input id="oct" oninput="Convert('oct', 8)" placeholder="oct" spellcheck="false"><br><br>
-                <input id="dec" oninput="Convert('dec', 10)" placeholder="dec" spellcheck="false"><br><br>
                 <input id="hex" oninput="Convert('hex', 16)" placeholder="hex" spellcheck="false"><br><br>
                 </body>
                 <script>
@@ -80,36 +81,25 @@
 
     
         <h2>Combinatorics</h2>
-    <div class="content_boxes">    
-            <div id="combinatorics">
-                <script type="text/javascript">
-                    // calculate n!
-                    Math.factorial = function(n)
-                    {
-                        if(typeof n == 'string') n = Number(n);
-                        if(typeof n != 'number' || isNaN(n))
-                        {
-                            alert("Factorial requires a numeric argument.");
-                            return null;
-                        }
-                        if (n < 2) return 1;
-                        return (n * Math.factorial(n-1));
-                    }
-                    Math.divide = function(a,b)
-                    {
-                        return a/b;
-                    }
-                    </script>
-                    
-                    <form class="form" name="combination" action="">
-                        <p>C(<input type="text" placeholder="n" name="T1" size="1">,<input type="text" placeholder="k" name="T2" size="1">)
-                        <input type="button" class="button" value="Calculate"
-                         onclick="var n = T1.value; var r = T2.value; var n_minus_r = parseFloat(n) - parseFloat(r); var numerator = Math.factorial(T1.value); var n_minus_r_fact = Math.factorial(n_minus_r); var r_fact = Math.factorial(r); var denominator = n_minus_r_fact * r_fact; T3.value = Math.divide(numerator,denominator); return true;">
-                        = <input type="text" name="T3" size="12" readonly></p>
-                    </form>
-
+        <div class="container">
+            <div class="combinatorics">
+              
+                
+                <div id="Combination" class="calculator" style="display:block"> This is combination <br>
+                    <input id="originalSet" type="number" placeholder="n" onchange="combination()"><br>
+                    <input id="subset" type="number" placeholder="r" onchange="combination()"><br><br>
+                    <button onclick="combination()">Calculate</button>
+                    <div id="result1"></div>
                 </div>
-
+                <div id="Permutation" class="calculator"> This is permutation <br>
+                    <input type="number" id="original" placeholder="n" onkeydown="if(event.keyCode == 13) permutation()"> <br>
+                    <input type="number" id="vacancies" placeholder="r" onkeydown="if(event.keyCode == 13) permutation()"> <br>
+                    <input type="checkbox" id="sampling">Sampling with replacement <br>
+                    <button onclick="permutation()">Calculate</button>
+                    <div id="result2"></div>
+                </div>
+            </div>
+            </div>
     </div>
 
 
@@ -140,22 +130,18 @@
 
     
             <h2>Random values</h2>
-    <div class="content_boxes">        
-            <div id="random_values">
-                Choose range <br><br>
-                From
-                <input type="number" id="min"> <br><br>
-                To
-                <input type="number" id="max"> <br><br>
+            <div> 
 
-                <button class="button" type="button" onclick="generateRandomNumber()">Generate random number</button>
-
-                <h3  id="display"></h3>
-
-                <script src="random.js"></script>
-
+                <label>min</label>
+                <input id="min" type="text" /><br />
+                <label>Max</label>
+                <input id="max" type="text" /><br />
+                <label>range</label>
+                <input id="range" type="text" /><br />
+                <button onclick="generateRandomNumber();">Generate</button>
+                <div id="display" style="font-size:50px;"></div>
                 </div>
-
-    </div>
+                
+            </div>
 </body>
 </html>
