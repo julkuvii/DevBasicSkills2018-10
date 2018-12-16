@@ -24,29 +24,36 @@
         <h2>Number system conversions</h2>
     <div class="content_boxes">
             <div id="number_system_conversions">
-                <input id="dec" oninput="Convert('dec', 10)" placeholder="dec" spellcheck="false"><br><br>
-                <input id="bin" oninput="Convert('bin', 2)" placeholder="bin" spellcheck="false"><br><br>
-                <input id="oct" oninput="Convert('oct', 8)" placeholder="oct" spellcheck="false"><br><br>
-                <input id="hex" oninput="Convert('hex', 16)" placeholder="hex" spellcheck="false"><br><br>
-                </body>
-                <script>
-                function id(id) {
-                  return document.getElementById(id);
-                }
-                function Convert(s, n) {
-                  if(parseInt(id(s).value, n)) {
-                    if("bin" != s) { id("bin").value = parseInt(id(s).value, n).toString(2) }
-                    if("oct" != s) { id("oct").value = parseInt(id(s).value, n).toString(8) }
-                    if("dec" != s) { id("dec").value = parseInt(id(s).value, n).toString(10) }
-                    if("hex" != s) { id("hex").value = parseInt(id(s).value, n).toString(16).toUpperCase() }
-                  } else {
-                    if("bin" != s) { id("bin").value = "" }
-                    if("oct" != s) { id("oct").value = "" }
-                    if("dec" != s) { id("dec").value = "" }
-                    if("hex" != s) { id("hex").value = "" }
-                  }
-                };
-                </script>
+                <html>
+<body>
+<form>
+<input id="bin" oninput="Convert('bin', 2)" placeholder="bin" spellcheck="false"><br><br>
+<input id="oct" oninput="Convert('oct', 8)" placeholder="oct" spellcheck="false"><br><br>
+<input id="dec" oninput="Convert('dec', 10)" placeholder="dec" spellcheck="false"><br><br>
+<input id="hex" oninput="Convert('hex', 16)" placeholder="hex" spellcheck="false"><br><br>
+<button type="reset">Clear</button>
+</form>
+</body>
+<script>
+function id(id) {
+  return document.getElementById(id);
+}
+function Convert(s, n) {
+  if(parseInt(id(s).value, n)) {
+    if("bin" != s) { id("bin").value = parseInt(id(s).value, n).toString(2) }
+    if("oct" != s) { id("oct").value = parseInt(id(s).value, n).toString(8) }
+    if("dec" != s) { id("dec").value = parseInt(id(s).value, n).toString(10) }
+    if("hex" != s) { id("hex").value = parseInt(id(s).value, n).toString(16) }
+  } else {
+    if("bin" != s) { id("bin").value = "invalid" }
+    if("oct" != s) { id("oct").value = "invalid" }
+    if("dec" != s) { id("dec").value = "invalid" }
+    if("hex" != s) { id("hex").value = "invalid" }
+  }
+};
+</script>
+</html>
+
 
             </div>
 
