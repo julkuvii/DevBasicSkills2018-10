@@ -1,0 +1,33 @@
+<html>
+<body>
+<div> 
+
+<label>min</label>
+<input id="min" type="text" /><br />
+<label>Max</label>
+<input id="max" type="text" /><br />
+<label>range</label>
+<input id="range" type="text" /><br />
+<button onclick="generateRandomNumber();">Generate</button>
+<div id="display" style="font-size:50px;"></div>
+</div>
+
+ <script>
+  function generateRandomNumber(){
+    var arr = [];
+    var min = parseInt(document.getElementById('min').value);
+    var max = parseInt(document.getElementById('max').value);
+    var range= parseInt(document.getElementById('range').value);
+    while(arr.length < range) {
+      var random = Math.floor(Math.random() * (max - min + 1)) + min;
+      if(arr.indexOf(random) === -1) {
+        arr.push(random);
+      }
+    }
+
+    document.getElementById("display").innerHTML = arr;
+
+    }
+    </script>
+   </body>
+   </html>
