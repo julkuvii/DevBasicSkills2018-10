@@ -36,6 +36,8 @@ h3{
     margin-left: 20%;
     padding: 1%;
     color: rgb(81, 121, 47);
+    align-items: center;
+    float: left;
 }
 
 .content_boxes{
@@ -84,16 +86,6 @@ td{
     padding: 8px;
 }
 
-#givenNumber{
-    width: 50%;
-    height: 20%;
-}
 
-#from{
-    width: 10%;
-}
 
-#to{
-    width: 10%;
-}
 

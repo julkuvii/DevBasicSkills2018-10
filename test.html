@@ -25,36 +25,39 @@
     <div class="content_boxes">
             <div id="number_system_conversions">
                 <html>
-<body>
-<form>
-<input id="bin" oninput="Convert('bin', 2)" placeholder="bin" spellcheck="false"><br><br>
-<input id="oct" oninput="Convert('oct', 8)" placeholder="oct" spellcheck="false"><br><br>
-<input id="dec" oninput="Convert('dec', 10)" placeholder="dec" spellcheck="false"><br><br>
-<input id="hex" oninput="Convert('hex', 16)" placeholder="hex" spellcheck="false"><br><br>
-<button type="reset">Clear</button>
-</form>
-</body>
-<script>
-function id(id) {
-  return document.getElementById(id);
-}
-function Convert(s, n) {
-  if(parseInt(id(s).value, n)) {
-    if("bin" != s) { id("bin").value = parseInt(id(s).value, n).toString(2) }
-    if("oct" != s) { id("oct").value = parseInt(id(s).value, n).toString(8) }
-    if("dec" != s) { id("dec").value = parseInt(id(s).value, n).toString(10) }
-    if("hex" != s) { id("hex").value = parseInt(id(s).value, n).toString(16) }
-  } else {
-    if("bin" != s) { id("bin").value = "invalid" }
-    if("oct" != s) { id("oct").value = "invalid" }
-    if("dec" != s) { id("dec").value = "invalid" }
-    if("hex" != s) { id("hex").value = "invalid" }
-  }
-};
-</script>
-</html>
+                    <body>
+                    <form>
+                    <input id="bin" oninput="Convert('bin', 2)" placeholder="bin" spellcheck="false"><br><br>
+                    <input id="oct" oninput="Convert('oct', 8)" placeholder="oct" spellcheck="false"><br><br>
+                    <input id="dec" oninput="Convert('dec', 10)" placeholder="dec" spellcheck="false"><br><br>
+                    <input id="hex" oninput="Convert('hex', 16)" placeholder="hex" spellcheck="false"><br><br>
+                    <button type="reset" class="button">Clear</button>
+                    </form>
+                    </body>
+                    <script>
+                    function id(id) {
+                    return document.getElementById(id);
+                    }
+                    function Convert(s, n) {
+                    if(parseInt(id(s).value, n)) {
+                        if("bin" != s) { id("bin").value = parseInt(id(s).value, n).toString(2) }
+                        if("oct" != s) { id("oct").value = parseInt(id(s).value, n).toString(8) }
+                        if("dec" != s) { id("dec").value = parseInt(id(s).value, n).toString(10) }
+                        if("hex" != s) { id("hex").value = parseInt(id(s).value, n).toString(16).toUpperCase() }
+                    } else {
+                        if("bin" != s) { id("bin").value = "invalid" }
+                        if("oct" != s) { id("oct").value = "invalid" }
+                        if("dec" != s) { id("dec").value = "invalid" }
+                        if("hex" != s) { id("hex").value = "invalid" }
+                    }
+                    };
+                    </script>
+                    </html>
 
 
+            </div>
+            <div class="info_box">
+                <p>Here you can convert from different number systems.  </p>
             </div>
 
     </div>
@@ -67,12 +70,12 @@ function Convert(s, n) {
 
                 <div>
                     <button class="button" onclick="print_table()">Print table</button>
-                    <button class="button" onclick="clear_table()">Hide table</button><br><br>
+                    <br><br>
 
                     <table id="number_table" class="truth_table">
                         
                     </table>
-
+                    <button class="button" onclick="clear_table()">Hide table</button>
                     <script src="output.js"></script>
                     
                 </div>
@@ -80,7 +83,7 @@ function Convert(s, n) {
             </div>
             <div class="info_box">
                 <p>Here you can print a table that has all decimal numbers from 0-50 converted
-                     into binary, octal and decimal numbers. You can hide the table with the Hide table
+                     into binary, octal and hexadecimal numbers. You can hide the table with the Hide table
                     button. </p>
             </div>
     </div>
@@ -88,6 +91,7 @@ function Convert(s, n) {
 
     
         <h2>Combinatorics</h2>
+        <div class="content_boxes">
         <div class="container">
             <div class="combinatorics">
               
@@ -95,26 +99,29 @@ function Convert(s, n) {
                 <div id="Combination" class="calculator" style="display:block">Combination <br>
                     <input id="originalSet" type="number" placeholder="n" onchange="combination()"><br>
                     <input id="subset" type="number" placeholder="r" onchange="combination()"><br><br>
-                    <button onclick="combination()">Calculate</button>
+                    <button class="button" onclick="combination()">Calculate</button>
                     <div id="result1"></div>
-                </div>
+                </div><br><br>
                 <div id="Permutation" class="calculator">Permutation <br>
                     <input type="number" id="original" placeholder="n" onkeydown="if(event.keyCode == 13) permutation()"> <br>
-                    <input type="number" id="vacancies" placeholder="r" onkeydown="if(event.keyCode == 13) permutation()"> <br>
-                    <input type="checkbox" id="sampling">Sampling with replacement <br>
-                    <button onclick="permutation()">Calculate</button>
+                    <input type="number" id="vacancies" placeholder="r" onkeydown="if(event.keyCode == 13) permutation()"> <br><br>
+                    <input type="checkbox" id="sampling">Sampling with replacement <br><br>
+                    <button class="button" onclick="permutation()">Calculate</button>
                     <div id="result2"></div>
                 </div>
             </div>
             </div>
-    </div>
+            <div class="info_box">
+                <p>Here you can calculate combinations and permutation with or without sampling </p>
+            </div>
+        </div>
 
 
     
         <h2>Truth tables</h2>
     <div class="content_boxes">    
             <div id="truth_tabels">
-
+                <div>
                 <table border="2px" id="table" class="truth_table">
                     <tr>
                       <th>x</th>
@@ -128,27 +135,35 @@ function Convert(s, n) {
                   </table>
 
                   <script src="truth_table.js"></script>
-                
-                
-                </div>
-
+                </div>   
+            </div>
+            <div class="info_box">
+                <p>Truth table with the most common operators </p>
+            </div>
     </div>
 
 
     
             <h2>Random values</h2>
-            <div> 
-
-                <label>min</label>
-                <input id="min" type="text" /><br />
-                <label>Max</label>
-                <input id="max" type="text" /><br />
-                <label>range</label>
-                <input id="range" type="text" /><br />
-                <button onclick="generateRandomNumber();">Generate</button>
+            <div class="content_boxes"> 
+              <div>
+                <h3>min</h3>
+                <input id="min" type="text" >
+                <h3>max</h3>
+                <input id="max" type="text" >
+                <h3>range</h3>
+                <input id="range" type="text" ><br><br>
+                <button class="button" onclick="generateRandomNumber();">Generate</button><br>
                 <div id="display" style="font-size:50px;"></div>
+                
+            </div>
+
+                <div class="info_box">
+                    <p>Here you can give a range from which the random numbers are picked
+                         and the amount of random values you want. </p>
                 </div>
                 
             </div>
+
 </body>
 </html>
